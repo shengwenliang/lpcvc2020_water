@@ -8,6 +8,8 @@ The solution of the third prize of FPGA track in 2020 Low-Power Computer Vision 
 
 >2020-08-20
 
+The content in `CVPR_2020_DAY12_4thead_9` folder is our award-winning solution that submits to LPCVC.
+
 ## Prerequisites
 * TF2.2 environment for train model
     - TensorFlow version = 2.2.0
@@ -64,7 +66,7 @@ sh 6_tf_compile_for_v2.sh
 ```
 
 ## Deploy elf on Ultra96-V2 board.
-7. Copy file to /CVPR_2020_DAY12_4thead_9/model/ file, and run test_accuracy_latency.ipynb to test accuracy and latency on Ultra96-V2 board. The thread is 4.
+7. Copy file to `/CVPR_2020_DAY12_4thead_9/model/` file, and run `test_accuracy_latency.ipynb` to test accuracy and latency on Ultra96-V2 board. The thread is 4.
 
 ## Docker image
 We provide a docker image in dokcer hub, which contains all source code except ImageNet dataset. You can start this dokcer image using `docker_run.sh` 
