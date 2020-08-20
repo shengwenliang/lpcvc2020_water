@@ -1,0 +1,36 @@
+# Classification accuracy and latency notebook guide
+
+Steps:
+1. For contestants, the first step is to download the Imagenet validation dataset and decompress the dataset.
+    Imagenet validation dataset can be downloaded at official site: http://image-net.org/download-images.  
+2. The second step is to use the gen_data.py to generate the image.list.gt file. For this you will need to download Imagenet_class_index.json 
+    [Download link: https://s3.amazonaws.com/deep-learning-models/image-models/imagenet_class_index.json]
+3. The third step is to integrate your programs according to the interface requirement in utils.py
+4. Finally, run the classification program (test_accuracy_latency.ipynb) with the imagenet validation dataset to get the final result, including performance result and accuracy result.
+
+
+Included files:
+
+  - test_accuracy_latency.ipynb : This is the main test program for classification accuracy and latency test. 
+    For most of classification test, imagenet2012 was used as the test data set. 
+    
+  - image.list.gt : is the ground truth of imagenet2012. User should use the gen_data.py that we provided to generate it.
+        
+        Steps to run gen_data.py
+        
+          1. Download imagenet validation dataset and decompress dataset. Move the gen_data.py and Imagenet_class_index.json files to the following location:
+              "imagenet-object-localization-challenge/ILSVRC/Annotations/CLS-LOC/"
+          2. In this location run Command: 
+             python gen_data.py 
+        
+  - image.list.result : is the output result of the contestant's respective programs. Please refer to "classification_result.sample" for the format requirements of the output results.  
+  
+  - evaluation.py : is used for the accuracy calculation.
+  
+  - utils.py :is the interface definition file and the contestants must implement its functions according to the interface definition.
+  
+    Note that if you use the other data set for test, you have to prepare the ground truth of the data set.
+  - classification_result.sample : to show the format of result. 
+    If you run a image named "001.jpg", you will get the top-5 labels. you should write 5 lines to result file, every line include image name and label index. 
+
+  

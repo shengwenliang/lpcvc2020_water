@@ -1,0 +1,1 @@
+python main.py   --use_tpu=false  --data_dir=/workspace/Image_Database/tfrecords --model_dir=dpu_lite0   --model_name='efficientnet-lite0'   --skip_host_call=true   --train_batch_size=128 --train_steps=14012672
